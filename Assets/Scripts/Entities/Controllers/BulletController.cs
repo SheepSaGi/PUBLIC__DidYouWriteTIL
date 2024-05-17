@@ -4,15 +4,87 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // 벽에 부딪혔을 때 판정할 레이어
+    [SerializeField] private LayerMask levelCollisionLayer;
+
+    private AttackSO attackData;
+    private float currentDuration;
+    private Vector2 direction;
+    private bool isReady;
+
+    private Rigidbody2D rigidbody;
+    private SpriteRenderer spriteRenderer;
+    private TrailRenderer trailRenderer;
+
+    public bool fxOnDestory = true;
+
+    private void Awake()
     {
-        
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (!isReady)
+        {
+            return;
+        }
+
+        currentDuration += Time.deltaTime;
+
+        if (currentDuration > attackData.duration)
+        {
+            DestroyBullet(transform.position, false);
+        }
+
+        rigidbody.velocity = direction * attackData.speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // levelCollisionLayer에 포함되는 레이어인지 확인합니다.
+        if (IsLayerMatched(levelCollisionLayer.value, collision.gameObject.layer))
+        {
+            // 벽에서는 충돌한 지점으로부터 약간 앞 쪽에서 발사체를 파괴합니다.
+            Vector2 destroyPosition = collision.ClosestPoint(transform.position) - direction * .2f;
+            DestroyBullet(destroyPosition, fxOnDestory);
+        }
+        // _attackData.target에 포함되는 레이어인지 확인합니다.
+        else if (IsLayerMatched(attackData.target.value, collision.gameObject.layer))
+        {
+            // 아야! 피격 구현에서 추가 예정
+            // 충돌한 지점에서 발사체를 파괴합니다.
+            DestroyBullet(collision.ClosestPoint(transform.position), fxOnDestory);
+        }
+    }
+
+    // 레이어가 일치하는지 확인하는 메소드입니다.
+    private bool IsLayerMatched(int layerMask, int objectLayer)
+    {
+        return layerMask == (layerMask | (1 << objectLayer));
+    }
+
+    public void InitializeAttack(Vector2 direction, AttackSO attackData)
+    {
+        this.attackData = attackData;
+        this.direction = direction;
+
+        trailRenderer.Clear();
+        currentDuration = 0;
+
+        transform.right = this.direction;
+
+        isReady = true;
+    }
+
+    private void DestroyBullet(Vector3 position, bool createFx)
+    {
+        if (createFx)
+        {
+            // TODO : ParticleSystem에 대해서 배우고, 무기 NameTag로 해당하는 FX가져오기
+        }
+        gameObject.SetActive(false);
     }
 }
