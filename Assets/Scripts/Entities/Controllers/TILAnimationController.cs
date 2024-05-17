@@ -44,7 +44,7 @@ public class TILAnimationController : MonoBehaviour
         animator.SetBool(IsHit, true);
     }
 
-    // 무적
+    // 피격당하는 동안은 무적 상태
     private void InvincibilityEnd()
     {
         animator.SetBool(IsHit, false);
