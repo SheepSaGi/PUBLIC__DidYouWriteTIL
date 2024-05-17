@@ -7,6 +7,7 @@ public class TILMovement : MonoBehaviour
 {
     private TILController controller;
     private Rigidbody2D movementRigidBody;
+    private CharacterStatHandler characterStatHandler;
 
     private Vector2 movementDirection = Vector2.zero;
 
@@ -14,7 +15,7 @@ public class TILMovement : MonoBehaviour
     {
         controller = GetComponent<TILController>();
         movementRigidBody = GetComponent<Rigidbody2D>();
-
+        characterStatHandler = GetComponent<CharacterStatHandler>();
     }
 
     private void Start()
@@ -34,7 +35,7 @@ public class TILMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5; //TODO: 속도 스탯값 넣기(characterStathandler)
+        direction = direction * characterStatHandler.CurrentStat.speed;
         movementRigidBody.velocity = direction;
     }
 }

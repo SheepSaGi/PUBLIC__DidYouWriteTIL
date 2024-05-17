@@ -19,9 +19,69 @@ public class HealthSystem : MonoBehaviour
 
     public float CurrentHealth { get; private set; }
 
-    // get만 구현된 것처럼 프로퍼티를 사용하는 것
-    // 이렇게 하면 데이터의 복제본이 여기저기 돌아다니다가 싱크가 깨지는 문제를 막을 수 있어요!
-    public float MaxHealth => statsHandler.CurrentStat.maxHealth;
+    // 람다식 => get만 구현된 것처럼 프로퍼티를 사용하는 것, 데이터의 복제본이 여기저기 돌아다니다가 싱크가 깨지는 문제를 막을 수 있다
+    public float MaxHealth => statsHandler.CurrentStat.maxHealth; // get { return statsHandler.CurrentStat.maxHealth; }
 
+    private void Awake()
+    {
+        statsHandler = GetComponent<CharacterStatHandler>();
+    }
 
+    private void Start()
+    {
+        CurrentHealth = statsHandler.CurrentStat.maxHealth;
+    }
+
+    private void Update()
+    {
+        if (isAttacked && timeSinceLastChange < healthChangeDelay)
+        {
+            timeSinceLastChange += Time.deltaTime;
+            if (timeSinceLastChange >= healthChangeDelay)
+            {
+                OnInvincibilityEnd?.Invoke();
+                isAttacked = false;
+            }
+        }
+    }
+
+    public bool ChangeHealth(float change)
+    {
+        // 무적 시간에는 체력이 달지 않음
+        if (timeSinceLastChange < healthChangeDelay)
+        {
+            return false;
+        }
+
+        timeSinceLastChange = 0f;
+        CurrentHealth += change;
+        // [최솟값을 0, 최댓값을 MaxHealth로 하는 구문]
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+        // 다른표현
+        // 1) CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
+        // 2) CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
+
+        if (CurrentHealth <= 0f) // 먼저 죽었는지 확인
+        {
+            CallDeath();
+            return true;
+        }
+
+        if (change >= 0) // + 를 해주는 작용이 일어나면 OnHeal
+        {
+            OnHeal?.Invoke();
+        }
+        else // 최종적으로 - 를 해주면 OnDamage
+        {
+            OnDamage?.Invoke();
+            isAttacked = true;
+        }
+
+        return true;
+    }
+
+    private void CallDeath()
+    {
+        OnDeath?.Invoke();
+    }
 }
