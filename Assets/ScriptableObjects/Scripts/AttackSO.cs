@@ -6,7 +6,7 @@ using UnityEngine;
 public class AttackSO : ScriptableObject
 {
     [Header("Attack Info")]
-    public float delay;
+    public float duration;
     public float power;
     public float speed;
     public LayerMask target;
