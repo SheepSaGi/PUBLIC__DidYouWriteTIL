@@ -13,14 +13,12 @@ public class BulletController : MonoBehaviour
     private bool isReady;
 
     private Rigidbody2D rigidbody;
-    private SpriteRenderer spriteRenderer;
     private TrailRenderer trailRenderer;
 
     public bool fxOnDestory = true;
 
     private void Awake()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         trailRenderer = GetComponent<TrailRenderer>();
     }
@@ -44,23 +42,20 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // levelCollisionLayer에 포함되는 레이어인지 확인합니다.
         if (IsLayerMatched(levelCollisionLayer.value, collision.gameObject.layer))
         {
             // 벽에서는 충돌한 지점으로부터 약간 앞 쪽에서 발사체를 파괴합니다.
             Vector2 destroyPosition = collision.ClosestPoint(transform.position) - direction * .2f;
             DestroyBullet(destroyPosition, fxOnDestory);
         }
-        // _attackData.target에 포함되는 레이어인지 확인합니다.
         else if (IsLayerMatched(attackData.target.value, collision.gameObject.layer))
         {
-            // 아야! 피격 구현에서 추가 예정
-            // 충돌한 지점에서 발사체를 파괴합니다.
+            // 충돌한 지점에서 발사체를 파괴
             DestroyBullet(collision.ClosestPoint(transform.position), fxOnDestory);
         }
     }
 
-    // 레이어가 일치하는지 확인하는 메소드입니다.
+    // 레이어가 일치하는지 확인
     private bool IsLayerMatched(int layerMask, int objectLayer)
     {
         return layerMask == (layerMask | (1 << objectLayer));
@@ -74,7 +69,7 @@ public class BulletController : MonoBehaviour
         trailRenderer.Clear();
         currentDuration = 0;
 
-        transform.right = this.direction;
+        transform.up = this.direction;
 
         isReady = true;
     }
