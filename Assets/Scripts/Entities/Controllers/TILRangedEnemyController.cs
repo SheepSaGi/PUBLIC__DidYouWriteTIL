@@ -42,7 +42,7 @@ public class TILRangedEnemyController : TILEnemyController
         }
         else
         {
-            CallMoveEvent(new Vector2 (direction.x*3,0)); // 사정거리 밖이지만 추적 범위 내에 있을 경우, 타겟 쪽으로 이동합니다.
+            CallMoveEvent(direction); // 사정거리 밖이지만 추적 범위 내에 있을 경우, 타겟 쪽으로 이동합니다.
         }
     }
 

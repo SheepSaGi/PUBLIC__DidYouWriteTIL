@@ -28,7 +28,7 @@ public class TILEnemyController : TILController
 
     protected Vector2 DirectionToTarget()
     {
-        return (ClosestTarget.position - transform.position).normalized;
+        return (new Vector3(ClosestTarget.position.x,0,0) - new Vector3(transform.position.x,0,0)).normalized;
     }
 
 }
