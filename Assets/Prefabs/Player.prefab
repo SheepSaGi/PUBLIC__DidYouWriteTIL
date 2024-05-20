@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6014900468248898436}
   - component: {fileID: 6530901552444924528}
   - component: {fileID: 154732742247833872}
+  - component: {fileID: 7648753445373924046}
+  - component: {fileID: 3513646140547903535}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -163,6 +165,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb068a517837c9b459749b62e5f1c9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7648753445373924046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265122569139979260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f93ebd8469322243ad8c8a8d3b84fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats:
+    statsChangeType: 0
+    maxHealth: 100
+    speed: 0
+    attackSO: {fileID: 11400000, guid: 9209faca454b4d64cbb6d62e7aacbe86, type: 2}
+  statsModifiers: []
+--- !u!114 &3513646140547903535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265122569139979260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff091be98c0d1a48a0df3f48882527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.1
 --- !u!1 &3586187848882996211
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,6 +207,8 @@ GameObject:
   - component: {fileID: 3580574767002051456}
   - component: {fileID: 3649147148478051203}
   - component: {fileID: 7575265096904687551}
+  - component: {fileID: 4396414426169413228}
+  - component: {fileID: 7409793131952021754}
   m_Layer: 0
   m_Name: MainSprite
   m_TagString: Untagged
@@ -269,3 +304,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4396414426169413228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586187848882996211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcae478fa49c2b24791dab54043e4422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7409793131952021754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586187848882996211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc850a9fa0adf94dbb94cb8596d30f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GiwoongController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
+  JiYoonController: {fileID: 9100000, guid: 9cd36aff9ef00f7469c6e22ae5b0da0c, type: 2}
+  JihyoController: {fileID: 9100000, guid: 29fce20e5b5a6de48877086d71669649, type: 2}
+  SunhoController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}

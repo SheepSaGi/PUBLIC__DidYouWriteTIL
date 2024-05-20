@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -232,6 +232,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcae478fa49c2b24791dab54043e4422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1282356086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1842833277374175773, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
+  m_PrefabInstance: {fileID: 1958814004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282356090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282356086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fcc44da2b8d2d46a1ae81e3f1b8920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHealth: {fileID: 1549424390}
 --- !u!1 &1348540124
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +882,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1265122569139979260, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265122569139979260, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3586187848882996211, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -999,6 +1029,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1751370890643973352, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1982749273, guid: 85703ee0d52ea0d479ea35a4259a0b41, type: 3}
     - target: {fileID: 6802268198021317534, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
       propertyPath: m_Name
       value: InGameUI
@@ -1090,7 +1124,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1842833277374175773, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1282356090}
   m_SourcePrefab: {fileID: 100100000, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
