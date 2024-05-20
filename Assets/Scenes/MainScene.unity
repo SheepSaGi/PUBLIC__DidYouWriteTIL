@@ -215,23 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1069795152 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3586187848882996211, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-  m_PrefabInstance: {fileID: 1549424387}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1069795156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069795152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcae478fa49c2b24791dab54043e4422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1348540124
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,53 +850,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1265122569139979260, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1549424389}
-    - targetCorrespondingSourceObject: {fileID: 1265122569139979260, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1549424390}
-    - targetCorrespondingSourceObject: {fileID: 3586187848882996211, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1069795156}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
---- !u!1 &1549424388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1265122569139979260, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-  m_PrefabInstance: {fileID: 1549424387}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1549424389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549424388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f93ebd8469322243ad8c8a8d3b84fae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseStats:
-    statsChangeType: 0
-    maxHealth: 100
-    speed: 0
-    attackSO: {fileID: 11400000, guid: 9209faca454b4d64cbb6d62e7aacbe86, type: 2}
-  statsModifiers: []
---- !u!114 &1549424390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549424388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aff091be98c0d1a48a0df3f48882527b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.1
 --- !u!1 &1716207287
 GameObject:
   m_ObjectHideFlags: 0

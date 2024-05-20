@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class CharacterChoiceManager : MonoBehaviour
 {
-    [SerializeField] Button Giwoong;
-    [SerializeField] Button JiYoon;
-    [SerializeField] Button Jihyo;
-    [SerializeField] Button Sunho;
+    [SerializeField] private Button Giwoong;
+    [SerializeField] private Button JiYoon;
+    [SerializeField] private Button Jihyo;
+    [SerializeField] private Button Sunho;
 
     void Start()
     {
@@ -21,10 +21,8 @@ public class CharacterChoiceManager : MonoBehaviour
 
     public void CharacterChoiceBtn(string characterName)
     {
-        PlayerPrefs.SetString("setPlayerName", characterName);
+        PlayerPrefs.SetString("setPlayer", characterName);
         SceneManager.LoadScene("MainScene");
         Debug.Log(characterName);
     }
-
-
 }
