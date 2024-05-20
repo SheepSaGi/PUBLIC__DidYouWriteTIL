@@ -6,6 +6,7 @@ using UnityEngine;
 public class AttackSO : ScriptableObject
 {
     [Header("Attack Info")]
+    public float count;
     public float duration;
     public float power;
     public float speed;
