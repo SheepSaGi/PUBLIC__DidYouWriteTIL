@@ -5,16 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Health
+  - HealthPotion
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
-  - Player
   - Enemy
   - Level
+  - Player
   - 
   - 
   - 
