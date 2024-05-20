@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2910698949109448529}
   - component: {fileID: 1134076577752359169}
+  - component: {fileID: -3639184392597293436}
   m_Layer: 0
   m_Name: CharacterBullet
   m_TagString: Untagged
@@ -84,3 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3639184392597293436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601733468290293459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173fb9f54b84ce3499529d4d08e4d40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelCollisionLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  fxOnDestory: 1
