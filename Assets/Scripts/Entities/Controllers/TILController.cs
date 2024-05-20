@@ -19,6 +19,11 @@ public class TILController : MonoBehaviour
         stats = GetComponent<CharacterStatHandler>();
     }
 
+    protected virtual void Update()
+    {
+        HandleAttackDelay();
+    }
+
     private void HandleAttackDelay()
     {
         if (timeSinceLastAttack <= stats.CurrentStat.attackSO.duration)
