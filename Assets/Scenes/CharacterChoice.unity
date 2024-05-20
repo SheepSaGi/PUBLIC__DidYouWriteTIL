@@ -341,19 +341,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 75406290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 254494593}
-        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: JihyoBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &75406290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,19 +536,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 229318725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 254494593}
-        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: SunhoBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &229318725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1656,19 +1632,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1305689071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 254494593}
-        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: JiYoonBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1305689071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,19 +1752,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1464653478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 254494593}
-        m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: GiwoongBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1464653478
 MonoBehaviour:
   m_ObjectHideFlags: 0
