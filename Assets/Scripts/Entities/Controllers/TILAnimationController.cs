@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.XR;
 
 public class TILAnimationController : MonoBehaviour
 {
+    protected HealthSystem healthSystem;
     protected Animator animator;
     //protected TopDownController controller;
 
@@ -17,6 +18,7 @@ public class TILAnimationController : MonoBehaviour
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
+        healthSystem = GetComponent<HealthSystem>();
     }
 
     void Start()
@@ -24,6 +26,12 @@ public class TILAnimationController : MonoBehaviour
         // 공격하거나 움직일 때 애니메이션이 같이 반응하도록 구독
         //controller.OnAttackEvent += Attacking;
         //controller.OnMoveEvent += Move;
+
+        if (healthSystem != null)
+        {
+            healthSystem.OnDamage += Hit;
+            healthSystem.OnInvincibilityEnd += InvincibilityEnd;
+        }
     }
 
     // 이동
