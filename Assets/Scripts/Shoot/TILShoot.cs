@@ -34,8 +34,15 @@ public class TILShoot : MonoBehaviour
     //    aimDirection = newAimDirection;
     //}
 
-    private void Onshoot(AttackSO sO)
+    private void Onshoot(AttackSO attackSO)
     {
+        //AttackSO AttackSO = attackSO as AttackSO;
+        //float projectilesAngleSpace =AttackSO.multipleProjectilesAngel;
+        //int numberOfProjectilesPerShot = AttackSO.numberofProjectilesPerShot;
+
+        // 중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계했어요! 
+        //float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * RangedAttackSO.multipleProjectilesAngel;
+
         CreateProjectile();    
     }
 
