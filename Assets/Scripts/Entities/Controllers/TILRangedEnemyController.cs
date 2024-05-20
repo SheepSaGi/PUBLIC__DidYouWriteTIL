@@ -42,6 +42,8 @@ public class TILRangedEnemyController : TILEnemyController
         }
         else
         {
+            Debug.Log("3");
+
             CallMoveEvent(direction); // 사정거리 밖이지만 추적 범위 내에 있을 경우, 타겟 쪽으로 이동합니다.
         }
     }
@@ -55,10 +57,15 @@ public class TILRangedEnemyController : TILEnemyController
         if (IsTargetHit(hit))
         {
             PerformAttackAction(direction);
+            Debug.Log("5");
+
         }
         else
         {
+            PerformAttackAction(direction);
             CallMoveEvent(direction);
+            Debug.Log("6");
+
         }
     }
 
@@ -79,5 +86,6 @@ public class TILRangedEnemyController : TILEnemyController
         // 타겟을 정확히 명중했을 경우의 행동을 정의합니다.
         CallMoveEvent(Vector2.zero); // 공격 중에는 이동을 멈춥니다.
         IsAttacking = true;
+        Debug.Log("공격중");
     }
 }

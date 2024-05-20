@@ -43,10 +43,13 @@ public class ObjectPool : MonoBehaviour
         if (!PoolDictionary.ContainsKey(tag))
             return null;
 
+
         // 제일 오래된 객체를 재활용
         GameObject obj = PoolDictionary[tag].Dequeue();
         PoolDictionary[tag].Enqueue(obj);
         obj.SetActive(true);
+        Debug.Log(obj.name);
+
         return obj;
     }
 }

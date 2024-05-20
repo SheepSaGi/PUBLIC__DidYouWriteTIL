@@ -12,7 +12,7 @@ public class TILShoot : MonoBehaviour
 {
     private TILController controller;
 
-    private ObjectPool objectPool;
+    //private ObjectPool objectPool;
 
     [SerializeField] private Transform bulletSpawnPosition;
     private Vector2 aimDirection = Vector2.right;
@@ -22,7 +22,7 @@ public class TILShoot : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<TILController>();
-        objectPool = GetComponent<ObjectPool>();
+        //objectPool = GetComponent<ObjectPool>();
     }
 
     private void Start()
@@ -43,13 +43,12 @@ public class TILShoot : MonoBehaviour
         // 중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계했어요! 
         //float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * RangedAttackSO.multipleProjectilesAngel;
 
-        CreateProjectile();    
+        CreateProjectile(attackSO);    
     }
 
-    private void CreateProjectile()
+    private void CreateProjectile(AttackSO attackSO)
     {
-
-        GameObject obj = objectPool.SpawnFromPool("Arrow");
+        GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool(attackSO.bulletNameTag);
         obj.transform.position = bulletSpawnPosition.position;
         BulletController attackController = obj.GetComponent<BulletController>();
 
