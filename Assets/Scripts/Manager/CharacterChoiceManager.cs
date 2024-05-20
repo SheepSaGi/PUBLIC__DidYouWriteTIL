@@ -10,45 +10,21 @@ public class CharacterChoiceManager : MonoBehaviour
     [SerializeField] Button JiYoon;
     [SerializeField] Button Jihyo;
     [SerializeField] Button Sunho;
-    private string setPlayerName = "Player";
 
-    public void GiwoongBtn()
+    void Start()
     {
-        setPlayerName = "Giwoong";
-        PlayerPrefs.SetString("setPlayerName", setPlayerName);
-        SceneManager.LoadScene("MainScene");
+        Giwoong.onClick.AddListener(() => CharacterChoiceBtn("Giwoong"));
+        JiYoon.onClick.AddListener(() => CharacterChoiceBtn("JiYoon"));
+        Jihyo.onClick.AddListener(() => CharacterChoiceBtn("Jihyo"));
+        Sunho.onClick.AddListener(() => CharacterChoiceBtn("Sunho"));
     }
 
-    public void JiYoonBtn()
+    public void CharacterChoiceBtn(string characterName)
     {
-        setPlayerName = "JiYoon";
-        PlayerPrefs.SetString("setPlayerName", setPlayerName);
+        PlayerPrefs.SetString("setPlayerName", characterName);
         SceneManager.LoadScene("MainScene");
-    }
-    
-    public void JihyoBtn()
-    {
-        setPlayerName = "Jihyo";
-        PlayerPrefs.SetString("setPlayerName", setPlayerName);
-        SceneManager.LoadScene("MainScene");
+        Debug.Log(characterName);
     }
 
-    public void SunhoBtn()
-    {
-        setPlayerName = "Sunho";
-        PlayerPrefs.SetString("setPlayerName", setPlayerName);
-        SceneManager.LoadScene("MainScene");
-    }
-    
 
-
-    //public void CharacterChoiceBtn()
-    //{
-
-
-    //    SceneManager.LoadScene("MainScene");
-    //}
-
-   
-   
 }

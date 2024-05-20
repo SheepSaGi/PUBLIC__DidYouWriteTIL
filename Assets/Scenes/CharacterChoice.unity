@@ -342,9 +342,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 254494593}
         m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: JihyoChlick
+        m_MethodName: JihyoBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 254494593}
         m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: SunhoClick
+        m_MethodName: SunhoBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 741362207}
   - component: {fileID: 741362206}
   m_Layer: 5
-  m_Name: ChoosCharacter
+  m_Name: ChooseCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1657,9 +1657,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 254494593}
         m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: JiYoonClick
+        m_MethodName: JiYoonBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1789,9 +1789,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 254494591}
+      - m_Target: {fileID: 254494593}
         m_TargetAssemblyTypeName: CharacterChoiceManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: GiwoongBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
