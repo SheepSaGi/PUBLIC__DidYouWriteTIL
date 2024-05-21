@@ -4,7 +4,7 @@ public class DestroyOnDeath : MonoBehaviour
 {
     private HealthSystem healthSystem;
     private Rigidbody2D rigidbody;
-
+    private GameManager gameManager;
     private void Start()
     {
         healthSystem = GetComponent<HealthSystem>();
@@ -32,6 +32,10 @@ public class DestroyOnDeath : MonoBehaviour
             component.enabled = false;
         }
 
+        if(gameObject.CompareTag("Player"))
+        {
+            gameManager.EndGame();
+        }
         // 2ÃÊµÚ¿¡ ÆÄ±«
         Destroy(gameObject, 2f);
     }
