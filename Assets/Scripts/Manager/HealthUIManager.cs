@@ -53,12 +53,11 @@ public class HealthUIManager : MonoBehaviour
     // 플레이어의 최대 체력에 따라 UI를 생성 및 현재 체력만큼 활성화
     private void CreateUI()
     {       
-        int currentHealth = characterHealth.CurrentHealth;
         for (int i = 0; i < characterHealth.MaxHealth; i++)
         {
             GameObject heart = Instantiate(heartPrefab, heartsParent);
             hearts.Add(heart);
-            hearts[i].SetActive(i < currentHealth);
+            hearts[i].SetActive(true);
         }
     }
 }
