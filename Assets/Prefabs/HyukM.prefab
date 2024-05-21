@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7643439965690632577}
   - component: {fileID: 3079087650126467010}
   - component: {fileID: 1106467560892184985}
+  - component: {fileID: 5321974798019554604}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -201,6 +202,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPosition: {fileID: 772176585285643246}
   CharacterBulletPrefab: {fileID: 1601733468290293459, guid: c942594f9c3c8f24b830c0ef2e532412, type: 3}
+--- !u!114 &5321974798019554604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773901211975948262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9cd3f6480112cc4b91869b01ad22564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHealth: {fileID: 0}
+  healAamount: 1
 --- !u!1 &1215624540795839314
 GameObject:
   m_ObjectHideFlags: 0

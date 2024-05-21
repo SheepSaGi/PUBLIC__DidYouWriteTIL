@@ -2,10 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPotion : MonoBehaviour
+public class DropHealthPotion : MonoBehaviour
 {
     [SerializeField] private HealthSystem characterHealth;
     [SerializeField] private int healAamount = 1;
+
+    private HealthSystem enemyHealth;
+
+    private void Awake()
+    {
+        enemyHealth = GetComponent<HealthSystem>();
+    }
+
+    private void Start()
+    {
+        enemyHealth.OnDeath += CreateItem;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,7 +27,7 @@ public class HealthPotion : MonoBehaviour
         }
     }
 
-    void CreatePotion()
+    void CreateItem()
     {
         GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool("HealthPotion");
         float x = Random.RandomRange(-2.5f, 2.5f);

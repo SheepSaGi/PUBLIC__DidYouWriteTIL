@@ -270,7 +270,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1556064864}
   m_SourcePrefab: {fileID: 100100000, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
 --- !u!1 &1348540124
 GameObject:
@@ -919,6 +922,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+--- !u!1 &1556064854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+  m_PrefabInstance: {fileID: 972787114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1556064864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556064854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9cd3f6480112cc4b91869b01ad22564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterHealth: {fileID: 1949489606}
+  healAamount: 1
 --- !u!1 &1716207287
 GameObject:
   m_ObjectHideFlags: 0
