@@ -15,7 +15,7 @@ public class TILShoot : MonoBehaviour
     //private ObjectPool objectPool;
 
     [SerializeField] private Transform bulletSpawnPosition;
-    private Vector2 aimDirection = Vector2.up;
+    protected Vector2 aimDirection = Vector2.up;
 
     public GameObject CharacterBulletPrefab;
 
