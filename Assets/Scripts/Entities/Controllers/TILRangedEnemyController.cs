@@ -36,7 +36,9 @@ public class TILRangedEnemyController : TILEnemyController
 
         if (isCollidingWithTarget)
         {
-            ApplyHealthChange();
+            Debug.Log("1");
+
+            //ApplyHealthChange();
         }
 
         float distanceToTarget = DistanceToTarget();
@@ -76,15 +78,11 @@ public class TILRangedEnemyController : TILEnemyController
         if (IsTargetHit(hit))
         {
             PerformAttackAction(direction);
-            Debug.Log("5");
-
         }
         else
         {
             PerformAttackAction(direction);
             CallMoveEvent(direction);
-            Debug.Log("6");
-
         }
     }
 
@@ -106,41 +104,41 @@ public class TILRangedEnemyController : TILEnemyController
         CallLookEvent(direction);
         CallMoveEvent(Vector2.zero); // 공격 중에는 이동을 멈춥니다.
         IsAttacking = true;
-        Debug.Log("공격중");
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject receiver = collision.gameObject;
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    GameObject receiver = collision.gameObject;
 
-        if (!receiver.CompareTag(targetTag))
-        {
-            return;
-        }
-        
-        collidingTargetHealthSystem = receiver.GetComponent<HealthSystem>();
-        if (collidingTargetHealthSystem != null)
-        {
-            isCollidingWithTarget = true;
-        }
+    //    if (!receiver.CompareTag(targetTag))
+    //    {
+    //        return;
+    //    }
 
-        collidingMovement = receiver.GetComponent<TILMovement>();
-    }
+    //    collidingTargetHealthSystem = receiver.GetComponent<HealthSystem>();
+    //    isCollidingWithTarget = true;
+    //    if (collidingTargetHealthSystem != null)
+    //    {
+    //        isCollidingWithTarget = true;
+    //    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!collision.CompareTag(targetTag))
-        {
-            return;
-        }
+    //    collidingMovement = receiver.GetComponent<TILMovement>();
+    //}
 
-        isCollidingWithTarget = false;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (!collision.CompareTag(targetTag))
+    //    {
+    //        return;
+    //    }
 
-    private void ApplyHealthChange()
-    {
-        Debug.Log("너니");
-        AttackSO attackSO = stats.CurrentStat.attackSO;
-        bool hasBeenChanged = collidingTargetHealthSystem.ChangeHealth(-(int)attackSO.power);
-    }
+    //    isCollidingWithTarget = false;
+    //}
+
+    //private void ApplyHealthChange()
+    //{
+    //    AttackSO attackSO = stats.CurrentStat.attackSO;
+    //    Debug.Log(attackSO.power);
+    //    bool hasBeenChanged = collidingTargetHealthSystem.ChangeHealth(-(int)attackSO.power);
+    //}
 }

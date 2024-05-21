@@ -17,7 +17,7 @@ public class TILAnimationController : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         healthSystem = GetComponent<HealthSystem>();
     }
 
