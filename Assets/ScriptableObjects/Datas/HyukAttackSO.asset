@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efcaa4883628324ca5dcf41f8b4afb3, type: 3}
   m_Name: HyukAttackSO
   m_EditorClassIdentifier: 
-  count: 0
-  duration: 0
+  count: 5
+  duration: 1
   power: 2
   speed: 10
   target:

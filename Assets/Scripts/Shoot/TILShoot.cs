@@ -15,7 +15,7 @@ public class TILShoot : MonoBehaviour
     //private ObjectPool objectPool;
 
     [SerializeField] private Transform bulletSpawnPosition;
-    private Vector2 aimDirection = Vector2.right;
+    private Vector2 aimDirection = Vector2.up;
 
     public GameObject CharacterBulletPrefab;
 
@@ -29,11 +29,11 @@ public class TILShoot : MonoBehaviour
     {
         controller.OnAttackEvent += Onshoot;
     }
-    //private void OnAim(Vector2 newAimDirection)
-    //{
-    //    aimDirection = newAimDirection;
-    //}
-
+    private void OnAim(Vector2 newAimDirection)
+    {
+        aimDirection = newAimDirection;
+    }
+    
     private void Onshoot(AttackSO attackSO)
     {
         //AttackSO AttackSO = attackSO as AttackSO;
@@ -51,12 +51,12 @@ public class TILShoot : MonoBehaviour
         GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool(attackSO.bulletNameTag);
         obj.transform.position = bulletSpawnPosition.position;
         BulletController attackController = obj.GetComponent<BulletController>();
-
+        attackController.InitializeAttack(RotateVector2(aimDirection), attackSO);
         //Instantiate(CharacterBulletPrefab, bulletSpawnPosition.position, Quaternion.identity);
     }
 
-    private Vector2 RotateVector2(Vector2 v)
+    private static Vector2 RotateVector2(Vector2 v)
     {
-        return Quaternion.Euler(0, 0, 0) * v;
+        return Quaternion.Euler(0f, 0f, 0) * v;
     }
 }
