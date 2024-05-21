@@ -1,37 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class DropHealthPotion : MonoBehaviour
 {
-    [SerializeField] private HealthSystem characterHealth;
-    [SerializeField] private int healAamount = 1;
-
+    [SerializeField] private HealthPotion healthPotion;
     private HealthSystem enemyHealth;
 
     private void Awake()
     {
-        enemyHealth = GetComponent<HealthSystem>();
+        this.enemyHealth = GetComponent<HealthSystem>();
     }
 
     private void Start()
     {
-        enemyHealth.OnDeath += CreateItem;
+        this.enemyHealth.OnDeath += CreateItem;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void CreateItem()
     {
-        if (other.CompareTag("Player")) // 플레이어와 충돌했을 때
-        {
-            characterHealth.ChangeHealth(healAamount);
-        }
-    }
-
-    void CreateItem()
-    {
-        GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool("HealthPotion");
+        GameObject potion = GameManager.Instance.ObjectPool.SpawnFromPool("HealthPotion");
         float x = Random.RandomRange(-2.5f, 2.5f);
         float y = Random.RandomRange(-3.5f, 3.5f);
-        obj.transform.position = new Vector2(x, y);
+        potion.transform.position = new Vector2(x, y);
     }
 }
