@@ -29,7 +29,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        CurrentHealth = statsHandler.CurrentStat.maxHealth;
+        CurrentHealth = statsHandler.CurrentStat.maxHealth - 2;
     }
 
     private void Update()
