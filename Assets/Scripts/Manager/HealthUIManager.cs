@@ -54,7 +54,6 @@ public class HealthUIManager : MonoBehaviour
     private void CreateUI()
     {       
         int currentHealth = characterHealth.CurrentHealth;
-        Debug.Log(currentHealth);
         for (int i = 0; i < characterHealth.MaxHealth; i++)
         {
             GameObject heart = Instantiate(heartPrefab, heartsParent);
