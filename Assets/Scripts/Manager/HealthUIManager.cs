@@ -5,10 +5,12 @@ using System.Collections.Generic;
 public class HealthUIManager : MonoBehaviour
 {
     [SerializeField] private HealthSystem characterHealth;
-    [SerializeField] private GameObject heartPrefab; // 하트 UI 프리팹
-    [SerializeField] private Transform heartsParent; // 하트 UI의 부모 객체
+    [SerializeField] private GameObject healthtPrefab; // 체력 UI 프리팹
+    [SerializeField] private Transform healthsParent; // 체력 UI의 부모 객체
 
-    private List<GameObject> hearts = new List<GameObject>(); // 하트 UI를 관리할 리스트
+    private List<GameObject> healths = new List<GameObject>(); // 체력 UI를 관리할 리스트
+
+    private int lastIndex;
 
     private void Start()
     {
@@ -30,11 +32,10 @@ public class HealthUIManager : MonoBehaviour
     private void OnDamageTaken()
     {
         // 피해를 입으면 가장 오른쪽에 있는 체력UI 비활성화
-        int lastIndex = hearts.Count - 1;
-        if (lastIndex >= 0)
+        if (lastIndex > 0)
         {
-            GameObject heart = hearts[lastIndex];
-            heart.SetActive(false);
+            GameObject health = healths[lastIndex--];
+            health.SetActive(false);
         }
     }
 
@@ -42,22 +43,23 @@ public class HealthUIManager : MonoBehaviour
     private void OnHealReceived()
     {
         // 회복을 받으면 가장 오른쪽에 비활성화된 체력UI 활성화
-        int lastIndex = hearts.Count - 1;
-        if (lastIndex >= 0)
+        
+        if (lastIndex > 0)
         {
-            GameObject heart = hearts[lastIndex];
-            heart.SetActive(true);
+            GameObject health = healths[lastIndex++];
+            health.SetActive(true);
         }
     }
 
     // 플레이어의 최대 체력에 따라 UI를 생성 및 현재 체력만큼 활성화
     private void CreateUI()
-    {       
+    {
         for (int i = 0; i < characterHealth.MaxHealth; i++)
         {
-            GameObject heart = Instantiate(heartPrefab, heartsParent);
-            hearts.Add(heart);
-            hearts[i].SetActive(true);
+            GameObject health = Instantiate(healthtPrefab, healthsParent);
+            healths.Add(health);
+            healths[i].SetActive(true);
         }
+        lastIndex = healths.Count - 1;
     }
 }
