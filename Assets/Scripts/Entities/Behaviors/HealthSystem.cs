@@ -20,7 +20,7 @@ public class HealthSystem : MonoBehaviour
     public float CurrentHealth { get; private set; }
 
     // 람다식 => get만 구현된 것처럼 프로퍼티를 사용하는 것, 데이터의 복제본이 여기저기 돌아다니다가 싱크가 깨지는 문제를 막을 수 있다
-    public float MaxHealth => statsHandler.CurrentStat.maxHealth; // get { return statsHandler.CurrentStat.maxHealth; }
+    public int MaxHealth => statsHandler.CurrentStat.maxHealth; // get { return statsHandler.CurrentStat.maxHealth; }
 
     private void Awake()
     {
