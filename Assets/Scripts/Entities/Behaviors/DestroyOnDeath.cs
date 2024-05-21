@@ -11,6 +11,8 @@ public class DestroyOnDeath : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         // 실제 실행 주체는 healthSystem임
         healthSystem.OnDeath += OnDeath;
+        gameManager = FindObjectOfType<GameManager>();
+
     }
 
     void OnDeath()
@@ -34,7 +36,9 @@ public class DestroyOnDeath : MonoBehaviour
 
         if(gameObject.CompareTag("Player"))
         {
+            Debug.Log("끝");
             gameManager.EndGame();
+
         }
         // 2초뒤에 파괴
         Destroy(gameObject, 2f);
