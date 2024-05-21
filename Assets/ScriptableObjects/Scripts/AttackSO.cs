@@ -12,4 +12,7 @@ public class AttackSO : ScriptableObject
     public float speed;
     public LayerMask target;
     public string bulletNameTag;
+    public int numberofBulletshot;
+    public float multupleBulletAngel;
+    public float spread;
 }
