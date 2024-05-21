@@ -972,9 +972,6 @@ MonoBehaviour:
   - tag: Arrow
     prefab: {fileID: 1601733468290293459, guid: c942594f9c3c8f24b830c0ef2e532412, type: 3}
     size: 20
-  - tag: HealthPotion
-    prefab: {fileID: 7483271267703022315, guid: 943e5ba0579a5284194d30fd66ea05ab, type: 3}
-    size: 5
   - tag: TILArrow
     prefab: {fileID: 252922752043563967, guid: 15249abe4ea2e1f4e84d684421b114df, type: 3}
     size: 20
