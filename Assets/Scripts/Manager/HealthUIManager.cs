@@ -12,11 +12,11 @@ public class HealthUIManager : MonoBehaviour
 
     private void Start()
     {
-        CreateUI();
-
         // 피해와 회복 이벤트에 대한 리스너 등록
         characterHealth.OnDamage += OnDamageTaken;
         characterHealth.OnHeal += OnHealReceived;
+
+        CreateUI();
     }
 
     private void OnDestroy()
@@ -53,8 +53,8 @@ public class HealthUIManager : MonoBehaviour
     // 플레이어의 최대 체력에 따라 UI를 생성 및 현재 체력만큼 활성화
     private void CreateUI()
     {       
-        //int currentHealth = (int)characterHealth.CurrentHealth;
-        int currentHealth = 3;
+        int currentHealth = characterHealth.CurrentHealth;
+        Debug.Log(currentHealth);
         for (int i = 0; i < characterHealth.MaxHealth; i++)
         {
             GameObject heart = Instantiate(heartPrefab, heartsParent);

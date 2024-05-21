@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private float healthChangeDelay = .5f;
+    [SerializeField] private float healthChangeDelay = 1.0f;
 
     private CharacterStatHandler statsHandler;
     private float timeSinceLastChange = float.MaxValue;
@@ -17,19 +17,15 @@ public class HealthSystem : MonoBehaviour
     public event Action OnDeath;
     public event Action OnInvincibilityEnd;
 
-    public float CurrentHealth { get; private set; }
+    public int CurrentHealth { get; private set; }
 
     // 람다식 => get만 구현된 것처럼 프로퍼티를 사용하는 것, 데이터의 복제본이 여기저기 돌아다니다가 싱크가 깨지는 문제를 막을 수 있다
-    public float MaxHealth => statsHandler.CurrentStat.maxHealth; // get { return statsHandler.CurrentStat.maxHealth; }
+    public int MaxHealth => statsHandler.CurrentStat.maxHealth; // get { return statsHandler.CurrentStat.maxHealth; }
 
     private void Awake()
     {
         statsHandler = GetComponent<CharacterStatHandler>();
-    }
-
-    private void Start()
-    {
-        CurrentHealth = statsHandler.CurrentStat.maxHealth;
+        CurrentHealth = statsHandler.CurrentStat.maxHealth - 2;
     }
 
     private void Update()
@@ -45,7 +41,7 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public bool ChangeHealth(float change)
+    public bool ChangeHealth(int change)
     {
         // 무적 시간에는 체력이 달지 않음
         if (timeSinceLastChange < healthChangeDelay)
