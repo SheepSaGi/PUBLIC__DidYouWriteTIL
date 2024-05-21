@@ -17,7 +17,7 @@ public class SpawnEnemyController : MonoBehaviour
     private void Update()
     {
         currTime += Time.deltaTime;
-        if(currTime > 2)
+        if(currTime > 20)
         {
             SpawnMonster();
             currTime = 0;

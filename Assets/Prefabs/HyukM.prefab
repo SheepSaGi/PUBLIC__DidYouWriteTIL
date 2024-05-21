@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5321974798019554604}
   - component: {fileID: 6284907656080555757}
   - component: {fileID: 2764843904513310633}
+  - component: {fileID: 1159423840320000355}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -198,8 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cd3f6480112cc4b91869b01ad22564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterHealth: {fileID: 0}
-  healAamount: 1
+  healthPotion: {fileID: 0}
 --- !u!114 &6284907656080555757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 1
---- !u!114 &2764843904513310633
+--- !u!114 &1159423840320000355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

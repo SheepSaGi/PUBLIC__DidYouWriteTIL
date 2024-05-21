@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 5444309084969413506}
   - component: {fileID: 2432888364546295741}
   - component: {fileID: 6553641196064720127}
+  - component: {fileID: 2444804656842127088}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -244,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPosition: {fileID: 8273882184526047099}
   CharacterBulletPrefab: {fileID: 1601733468290293459, guid: c942594f9c3c8f24b830c0ef2e532412, type: 3}
---- !u!114 &6553641196064720127
+--- !u!114 &2444804656842127088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
