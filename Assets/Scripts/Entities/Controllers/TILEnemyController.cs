@@ -23,12 +23,12 @@ public class TILEnemyController : TILController
 
     protected float DistanceToTarget()
     {
-        return Vector3.Distance(new Vector3(transform.position.x,0,0),new Vector3(ClosestTarget.position.x,0,0));
+        return Vector3.Distance(transform.position,ClosestTarget.position);
     }
 
     protected Vector2 DirectionToTarget()
     {
-        return (new Vector3(ClosestTarget.position.x,0,0) - new Vector3(transform.position.x,0,0)).normalized;
+        return (ClosestTarget.position - transform.position).normalized;
     }
 
 }
