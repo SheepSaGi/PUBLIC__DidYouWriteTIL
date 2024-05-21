@@ -32,7 +32,7 @@ public class HealthUIManager : MonoBehaviour
     private void OnDamageTaken()
     {
         // 피해를 입으면 가장 오른쪽에 있는 체력UI 비활성화
-        if (lastIndex >= 0)
+        if (lastIndex > 0)
         {
             GameObject health = healths[lastIndex--];
             health.SetActive(false);
@@ -44,7 +44,7 @@ public class HealthUIManager : MonoBehaviour
     {
         // 회복을 받으면 가장 오른쪽에 비활성화된 체력UI 활성화
         
-        if (lastIndex >= 0)
+        if (lastIndex > 0)
         {
             GameObject health = healths[lastIndex++];
             health.SetActive(true);
