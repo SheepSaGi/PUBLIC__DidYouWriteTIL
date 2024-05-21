@@ -1,11 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Serialization;
-using Unity.Properties;
 using UnityEngine;
-
-using UnityEngine.Pool;
 
 
 public class TILShoot : MonoBehaviour
@@ -34,30 +27,36 @@ public class TILShoot : MonoBehaviour
     {
         aimDirection = newAimDirection;
     }
-    
+
     private void Onshoot(AttackSO attackSO)
     {
-        //AttackSO AttackSO = attackSO as AttackSO;
-        //float projectilesAngleSpace =AttackSO.multipleProjectilesAngel;
-        //int numberOfProjectilesPerShot = AttackSO.numberofProjectilesPerShot;
+        AttackSO AttackSO = attackSO as AttackSO;
+        float projectilesAngleSpace =AttackSO.multupleBulletAngel;
+        int numberOfProjectilesPerShot = AttackSO.numberofBulletshot;
 
-        // 중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계했어요! 
-        //float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * RangedAttackSO.multipleProjectilesAngel;
-
-        CreateProjectile(attackSO);    
+        //중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계했어요! 
+        float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * AttackSO.multupleBulletAngel;
+        for (int i = 0; i < numberOfProjectilesPerShot; i++)
+        {
+            float angle = minAngle + projectilesAngleSpace * i;
+            // 그냥 올라가면 재미없으니 랜덤으로 변하는 randomSpread를 넣었어요!
+            float randomSpread = Random.Range(-AttackSO.spread, AttackSO.spread);
+            angle += randomSpread;
+            CreateProjectile(AttackSO, angle);
+        }
+        //CreateProjectile(attackSO);    
     }
 
-    private void CreateProjectile(AttackSO attackSO)
+    private void CreateProjectile(AttackSO attackSO, float angle)
     {
         GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool(attackSO.bulletNameTag);
         obj.transform.position = bulletSpawnPosition.position;
         BulletController attackController = obj.GetComponent<BulletController>();
-        attackController.InitializeAttack(RotateVector2(aimDirection), attackSO);
-        //Instantiate(CharacterBulletPrefab, bulletSpawnPosition.position, Quaternion.identity);
+        attackController.InitializeAttack(RotateVector2(aimDirection, angle), attackSO);
     }
 
-    private static Vector2 RotateVector2(Vector2 v)
+    private static Vector2 RotateVector2(Vector2 v, float angle)
     {
-        return Quaternion.Euler(0f, 0f, 0) * v;
+        return Quaternion.Euler(0f, 0f, 0f) * v;
     }
 }
