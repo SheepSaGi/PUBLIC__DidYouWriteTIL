@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3079087650126467010}
   - component: {fileID: 1106467560892184985}
   - component: {fileID: 5321974798019554604}
+  - component: {fileID: 7016817205092278353}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &8251371157985311089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 2
+    statsChangeType: 0
     maxHealth: 3
     speed: 2
     attackSO: {fileID: 11400000, guid: 58173abda50b5d1449a452e5e918f8a9, type: 2}
@@ -156,8 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbab720c87b52e3418ea62740f45ddff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 3
-  shootRange: 1.5
+  followRange: 6
+  shootRange: 5
+  targetTag: Player
 --- !u!114 &7643439965690632577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPosition: {fileID: 772176585285643246}
-  CharacterBulletPrefab: {fileID: 1601733468290293459, guid: c942594f9c3c8f24b830c0ef2e532412, type: 3}
+  CharacterBulletPrefab: {fileID: 252922752043563967, guid: 15249abe4ea2e1f4e84d684421b114df, type: 3}
 --- !u!114 &5321974798019554604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +218,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterHealth: {fileID: 0}
   healAamount: 1
+--- !u!114 &7016817205092278353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773901211975948262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff091be98c0d1a48a0df3f48882527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 1
 --- !u!1 &1215624540795839314
 GameObject:
   m_ObjectHideFlags: 0

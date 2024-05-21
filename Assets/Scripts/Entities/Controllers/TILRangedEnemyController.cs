@@ -140,6 +140,7 @@ public class TILRangedEnemyController : TILEnemyController
 
     private void ApplyHealthChange()
     {
+        Debug.Log("³Ê´Ï");
         AttackSO attackSO = stats.CurrentStat.attackSO;
         bool hasBeenChanged = collidingTargetHealthSystem.ChangeHealth(-(int)attackSO.power);
     }
