@@ -20,3 +20,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   bulletNameTag: TILArrow
+  numberofBulletshot: 5
+  multupleBulletAngel: 5
+  spread: 5
