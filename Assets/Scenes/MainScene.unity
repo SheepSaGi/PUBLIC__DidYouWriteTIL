@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HyukM
       objectReference: {fileID: 0}
+    - target: {fileID: 4474145692476360398, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -873,6 +877,18 @@ PrefabInstance:
     - target: {fileID: 1384388834233324444, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3122306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02230215
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4914151360628444159, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_LocalPosition.x

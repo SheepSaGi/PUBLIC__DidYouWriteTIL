@@ -42,10 +42,11 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(attackData.target.value);
+        Debug.Log(collision.gameObject.layer);
+
         if (IsLayerMatched(levelCollisionLayer.value, collision.gameObject.layer))
         {
-            Debug.Log("1");
-
             // 벽에서는 충돌한 지점으로부터 약간 앞 쪽에서 발사체를 파괴합니다.
             Vector2 destroyPosition = collision.ClosestPoint(transform.position) - direction * .2f;
             DestroyBullet(destroyPosition, fxOnDestory);
