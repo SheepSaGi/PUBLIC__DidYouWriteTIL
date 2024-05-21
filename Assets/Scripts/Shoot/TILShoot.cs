@@ -15,7 +15,7 @@ public class TILShoot : MonoBehaviour
     //private ObjectPool objectPool;
 
     [SerializeField] private Transform bulletSpawnPosition;
-    private Vector2 aimDirection = Vector2.up;
+    protected Vector2 aimDirection = Vector2.up;
 
     public GameObject CharacterBulletPrefab;
 
@@ -28,6 +28,7 @@ public class TILShoot : MonoBehaviour
     private void Start()
     {
         controller.OnAttackEvent += Onshoot;
+        controller.OnLookEvent += OnAim;
     }
     private void OnAim(Vector2 newAimDirection)
     {
