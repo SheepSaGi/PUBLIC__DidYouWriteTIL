@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 4677445791577182735}
   - component: {fileID: 3129440714802851858}
   - component: {fileID: 7643439965690632577}
-  - component: {fileID: 3079087650126467010}
   - component: {fileID: 1106467560892184985}
   - component: {fileID: 5321974798019554604}
-  - component: {fileID: 7016817205092278353}
+  - component: {fileID: 6284907656080555757}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -172,24 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcae478fa49c2b24791dab54043e4422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3079087650126467010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773901211975948262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f93ebd8469322243ad8c8a8d3b84fae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseStats:
-    statsChangeType: 0
-    maxHealth: 3
-    speed: 2
-    attackSO: {fileID: 11400000, guid: 58173abda50b5d1449a452e5e918f8a9, type: 2}
-  statsModifiers: []
 --- !u!114 &1106467560892184985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterHealth: {fileID: 0}
   healAamount: 1
---- !u!114 &7016817205092278353
+--- !u!114 &6284907656080555757
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

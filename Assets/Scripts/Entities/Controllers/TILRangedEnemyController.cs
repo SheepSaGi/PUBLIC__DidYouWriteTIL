@@ -22,7 +22,6 @@ public class TILRangedEnemyController : TILEnemyController
         base.Start();
         layerMaskLevel = LayerMask.NameToLayer("Level");
         layerMaskTarget = stats.CurrentStat.attackSO.target;
-
         healthSystem = GetComponent<HealthSystem>();
         //healthSystem.OnDamage += OnDamage;//추후 필요없으면 삭제
     }
@@ -118,7 +117,7 @@ public class TILRangedEnemyController : TILEnemyController
         {
             return;
         }
-
+        
         collidingTargetHealthSystem = receiver.GetComponent<HealthSystem>();
         if (collidingTargetHealthSystem != null)
         {

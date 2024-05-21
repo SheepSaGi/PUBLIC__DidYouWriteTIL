@@ -25,6 +25,11 @@ public class HealthSystem : MonoBehaviour
     private void Awake()
     {
         statsHandler = GetComponent<CharacterStatHandler>();
+        
+    }
+
+    private void Start()
+    {
         CurrentHealth = statsHandler.CurrentStat.maxHealth;
     }
 
