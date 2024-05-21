@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1106467560892184985}
   - component: {fileID: 5321974798019554604}
   - component: {fileID: 6284907656080555757}
+  - component: {fileID: 2764843904513310633}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2221158738427961896}
@@ -71,7 +72,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.011262417, y: 0.17456496}
@@ -113,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &8251371157985311089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 0
     maxHealth: 3
-    speed: 2
+    speed: 1
     attackSO: {fileID: 11400000, guid: 58173abda50b5d1449a452e5e918f8a9, type: 2}
   statsModifiers: []
 --- !u!114 &4677445791577182735
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbab720c87b52e3418ea62740f45ddff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 6
+  followRange: 8
   shootRange: 5
   targetTag: Player
 --- !u!114 &7643439965690632577
@@ -212,6 +213,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 1
+--- !u!114 &2764843904513310633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773901211975948262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b494f9fb1a7ae1743a22705405d9e163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1215624540795839314
 GameObject:
   m_ObjectHideFlags: 0

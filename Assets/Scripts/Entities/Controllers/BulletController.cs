@@ -42,8 +42,6 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("1");
-
         if (IsLayerMatched(levelCollisionLayer.value, collision.gameObject.layer))
         {
             Debug.Log("1");
@@ -54,21 +52,15 @@ public class BulletController : MonoBehaviour
         }
         else if (IsLayerMatched(attackData.target.value, collision.gameObject.layer))
         {
-            Debug.Log("2");
             // 충돌한 지점에서 발사체를 파괴
             DestroyBullet(collision.ClosestPoint(transform.position), fxOnDestory);
-            Debug.Log(attackData.power);
 
             //아래부터 체력 관련코드
             HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
-            Debug.Log(healthSystem);
-
             if (healthSystem != null)
             {
-                Debug.Log(attackData.power);
                 // 충돌한 오브젝트의 체력을 감소시킵니다.
                 bool isAttackApplied = healthSystem.ChangeHealth(-(int)attackData.power);
-
             }
             //여기까지 체력코드
 
