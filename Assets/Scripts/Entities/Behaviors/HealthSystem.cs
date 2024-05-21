@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] private float healthChangeDelay = .5f;
+    [SerializeField] private float healthChangeDelay = 1.0f;
 
     private CharacterStatHandler statsHandler;
     private float timeSinceLastChange = float.MaxValue;
