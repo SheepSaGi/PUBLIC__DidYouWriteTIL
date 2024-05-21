@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2efcaa4883628324ca5dcf41f8b4afb3, type: 3}
-  m_Name: HyukAttackSO
+  m_Name: EnumyAttack
   m_EditorClassIdentifier: 
-  count: 5
-  duration: 1
-  power: 1
-  speed: 3
+  count: 0
+  duration: 0
+  power: 0
+  speed: 0
   target:
     serializedVersion: 2
     m_Bits: 0
-  bulletNameTag: TILArrow
-  numberofBulletshot: 5
-  multupleBulletAngel: 5
-  spread: 5
+  bulletNameTag: 
+  numberofBulletshot: 0
+  multupleBulletAngel: 0
+  spread: 0
