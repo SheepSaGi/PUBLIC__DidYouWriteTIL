@@ -18,5 +18,5 @@ MonoBehaviour:
   speed: 10
   target:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   bulletNameTag: Arrow

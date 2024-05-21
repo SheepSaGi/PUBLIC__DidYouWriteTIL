@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 4914151360628444159}
   - component: {fileID: 8027499514093302853}
   - component: {fileID: 2076679444672832933}
-  - component: {fileID: 6183823511908517938}
   - component: {fileID: 1181350723864644268}
   - component: {fileID: 8727432352671754935}
   - component: {fileID: 2782315884011238619}
@@ -145,22 +144,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6183823511908517938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384388834233324444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bc850a9fa0adf94dbb94cb8596d30f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GiwoongController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
-  JiYoonController: {fileID: 9100000, guid: 9cd36aff9ef00f7469c6e22ae5b0da0c, type: 2}
-  JihyoController: {fileID: 9100000, guid: 29fce20e5b5a6de48877086d71669649, type: 2}
-  SunhoController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
 --- !u!114 &1181350723864644268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +254,7 @@ GameObject:
   - component: {fileID: 2189204541298457328}
   - component: {fileID: 2084581031013241885}
   - component: {fileID: 2419472585739803655}
+  - component: {fileID: 8761549152761821762}
   m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
@@ -366,3 +350,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8761549152761821762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7012582450593354118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc850a9fa0adf94dbb94cb8596d30f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GiwoongController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
+  JiYoonController: {fileID: 9100000, guid: 9cd36aff9ef00f7469c6e22ae5b0da0c, type: 2}
+  JihyoController: {fileID: 9100000, guid: 29fce20e5b5a6de48877086d71669649, type: 2}
+  SunhoController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
