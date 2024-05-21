@@ -8,6 +8,7 @@ public class TILController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<AttackSO> OnAttackEvent;
+    public event Action<Vector2> OnLookEvent;
     protected bool IsAttacking { get; set; }
 
     private float timeSinceLastAttack = float.MaxValue;
@@ -44,5 +45,9 @@ public class TILController : MonoBehaviour
     public void CallAttackEvent(AttackSO attackSO)
     {
         OnAttackEvent?.Invoke(attackSO);
+    }
+    public void CallLookEvent(Vector2 direction)
+    {
+        OnLookEvent?.Invoke(direction);
     }
 }

@@ -28,6 +28,7 @@ public class TILShoot : MonoBehaviour
     private void Start()
     {
         controller.OnAttackEvent += Onshoot;
+        controller.OnLookEvent += OnAim;
     }
     private void OnAim(Vector2 newAimDirection)
     {

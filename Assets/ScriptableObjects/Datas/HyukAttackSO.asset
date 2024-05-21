@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 5
   duration: 1
-  power: 2
+  power: 1
   speed: 10
   target:
     serializedVersion: 2
     m_Bits: 256
-  bulletNameTag: Arrow
+  bulletNameTag: TILArrow
