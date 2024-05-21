@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class DropHealthPotion : MonoBehaviour
 {
-    [SerializeField] private HealthPotion healthPotion;
     private HealthSystem enemyHealth;
 
     private void Awake()

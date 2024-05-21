@@ -23,23 +23,12 @@ public class TILRangedEnemyController : TILEnemyController
         layerMaskLevel = LayerMask.NameToLayer("Level");
         layerMaskTarget = stats.CurrentStat.attackSO.target;
         healthSystem = GetComponent<HealthSystem>();
-        //healthSystem.OnDamage += OnDamage;//추후 필요없으면 삭제
     }
-    //private void OnDamage()//추후 필요없으면 삭제
-    //{
-    //    followRange = 6f;
-    //}
+
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-
-        if (isCollidingWithTarget)
-        {
-            Debug.Log("1");
-
-            //ApplyHealthChange();
-        }
 
         float distanceToTarget = DistanceToTarget();
         Vector2 directionToTarget = DirectionToTarget();
@@ -102,43 +91,7 @@ public class TILRangedEnemyController : TILEnemyController
     {
         // 타겟을 정확히 명중했을 경우의 행동을 정의합니다.
         CallLookEvent(direction);
-        CallMoveEvent(Vector2.zero); // 공격 중에는 이동을 멈춥니다.
+        //CallMoveEvent(Vector2.zero); // 공격 중에는 이동을 멈춥니다.
         IsAttacking = true;
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    GameObject receiver = collision.gameObject;
-
-    //    if (!receiver.CompareTag(targetTag))
-    //    {
-    //        return;
-    //    }
-
-    //    collidingTargetHealthSystem = receiver.GetComponent<HealthSystem>();
-    //    isCollidingWithTarget = true;
-    //    if (collidingTargetHealthSystem != null)
-    //    {
-    //        isCollidingWithTarget = true;
-    //    }
-
-    //    collidingMovement = receiver.GetComponent<TILMovement>();
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (!collision.CompareTag(targetTag))
-    //    {
-    //        return;
-    //    }
-
-    //    isCollidingWithTarget = false;
-    //}
-
-    //private void ApplyHealthChange()
-    //{
-    //    AttackSO attackSO = stats.CurrentStat.attackSO;
-    //    Debug.Log(attackSO.power);
-    //    bool hasBeenChanged = collidingTargetHealthSystem.ChangeHealth(-(int)attackSO.power);
-    //}
 }

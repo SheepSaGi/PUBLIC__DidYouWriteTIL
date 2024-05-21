@@ -135,13 +135,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HyukM
       objectReference: {fileID: 0}
-    - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 4474145692476360398, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.25
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -174,6 +178,14 @@ PrefabInstance:
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321974798019554604, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: characterHealth
+      value: 
+      objectReference: {fileID: 1916349936}
+    - target: {fileID: 8251371157985311089, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: baseStats.maxHealth
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -866,6 +878,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3122306
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02230215
+      objectReference: {fileID: 0}
+    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4914151360628444159, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -922,6 +946,7 @@ GameObject:
   - component: {fileID: 1526370402}
   - component: {fileID: 1526370404}
   - component: {fileID: 1526370403}
+  - component: {fileID: 1526370405}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -959,9 +984,12 @@ MonoBehaviour:
   Pools:
   - tag: Arrow
     prefab: {fileID: 1601733468290293459, guid: c942594f9c3c8f24b830c0ef2e532412, type: 3}
-    size: 20
+    size: 50
   - tag: TILArrow
     prefab: {fileID: 252922752043563967, guid: 15249abe4ea2e1f4e84d684421b114df, type: 3}
+    size: 20
+  - tag: HyukM
+    prefab: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
     size: 20
   - tag: HealthPotion
     prefab: {fileID: 1417609036074876684, guid: 712f795d52a876c429407ae297960fcb, type: 3}
@@ -979,6 +1007,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
+--- !u!114 &1526370405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526370401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed840bf2272e6d94a950e8f9eea04669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Monster: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
 --- !u!1 &1716207287
 GameObject:
   m_ObjectHideFlags: 0
