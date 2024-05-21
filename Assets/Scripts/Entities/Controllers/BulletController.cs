@@ -42,6 +42,8 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("1");
+
         if (IsLayerMatched(levelCollisionLayer.value, collision.gameObject.layer))
         {
             Debug.Log("1");
