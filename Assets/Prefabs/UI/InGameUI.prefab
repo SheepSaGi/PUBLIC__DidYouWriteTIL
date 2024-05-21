@@ -83,6 +83,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterHealth: {fileID: 0}
+  heartPrefab: {fileID: 7483271267703022315, guid: 943e5ba0579a5284194d30fd66ea05ab, type: 3}
+  heartsParent: {fileID: 8972780737625084703}
 --- !u!1 &3304213191034403185
 GameObject:
   m_ObjectHideFlags: 0
