@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterHealth: {fileID: 0}
+  heartPrefab: {fileID: 0}
+  heartsParent: {fileID: 0}
 --- !u!114 &1282356091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,7 +978,7 @@ Transform:
   m_GameObject: {fileID: 3266096827699657287}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.19, z: 0}
+  m_LocalPosition: {x: 0, y: -0.999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -999,6 +1001,7 @@ GameObject:
   - component: {fileID: 7643439965018788907}
   - component: {fileID: 3079087649486471784}
   - component: {fileID: 1106467560775431219}
+  - component: {fileID: 8251371157025305820}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Untagged
@@ -1258,7 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 0
-    maxHealth: 30
+    maxHealth: 5
     speed: 5
     attackSO: {fileID: 11400000, guid: 9209faca454b4d64cbb6d62e7aacbe86, type: 2}
   statsModifiers: []
@@ -1902,6 +1905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followRange: 6
   shootRange: 8
+  targetTag: Player
 --- !u!1 &3254799697187521087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,11 +2893,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 2
+    statsChangeType: 0
     maxHealth: 3
     speed: 2
     attackSO: {fileID: 11400000, guid: 58173abda50b5d1449a452e5e918f8a9, type: 2}
   statsModifiers: []
+--- !u!114 &8251371157025305820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773901212644383308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff091be98c0d1a48a0df3f48882527b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 1
 --- !u!4 &8273882186473111230
 Transform:
   m_ObjectHideFlags: 0

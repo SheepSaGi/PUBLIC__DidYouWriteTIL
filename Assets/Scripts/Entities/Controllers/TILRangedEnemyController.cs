@@ -5,6 +5,15 @@ public class TILRangedEnemyController : TILEnemyController
 {
     [SerializeField] private float followRange = 9f;
     [SerializeField] private float shootRange = 7f;
+    [SerializeField] private string targetTag = "Player";
+
+    private bool isCollidingWithTarget;
+
+    private HealthSystem healthSystem;
+    private HealthSystem collidingTargetHealthSystem;
+    private TILMovement collidingMovement;
+
+
     private int layerMaskLevel;
     private int layerMaskTarget;
 
@@ -13,11 +22,23 @@ public class TILRangedEnemyController : TILEnemyController
         base.Start();
         layerMaskLevel = LayerMask.NameToLayer("Level");
         layerMaskTarget = stats.CurrentStat.attackSO.target;
+
+        healthSystem = GetComponent<HealthSystem>();
+        //healthSystem.OnDamage += OnDamage;//추후 필요없으면 삭제
     }
+    //private void OnDamage()//추후 필요없으면 삭제
+    //{
+    //    followRange = 6f;
+    //}
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+
+        if (isCollidingWithTarget)
+        {
+            ApplyHealthChange();
+        }
 
         float distanceToTarget = DistanceToTarget();
         Vector2 directionToTarget = DirectionToTarget();
@@ -87,5 +108,39 @@ public class TILRangedEnemyController : TILEnemyController
         CallMoveEvent(Vector2.zero); // 공격 중에는 이동을 멈춥니다.
         IsAttacking = true;
         Debug.Log("공격중");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject receiver = collision.gameObject;
+
+        if (!receiver.CompareTag(targetTag))
+        {
+            return;
+        }
+
+        collidingTargetHealthSystem = receiver.GetComponent<HealthSystem>();
+        if (collidingTargetHealthSystem != null)
+        {
+            isCollidingWithTarget = true;
+        }
+
+        collidingMovement = receiver.GetComponent<TILMovement>();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!collision.CompareTag(targetTag))
+        {
+            return;
+        }
+
+        isCollidingWithTarget = false;
+    }
+
+    private void ApplyHealthChange()
+    {
+        AttackSO attackSO = stats.CurrentStat.attackSO;
+        bool hasBeenChanged = collidingTargetHealthSystem.ChangeHealth(-(int)attackSO.power);
     }
 }

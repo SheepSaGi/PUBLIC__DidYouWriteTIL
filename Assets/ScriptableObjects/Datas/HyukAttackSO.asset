@@ -18,7 +18,5 @@ MonoBehaviour:
   speed: 10
   target:
     serializedVersion: 2
-    m_Bits: 256
-  bulletNameTag: TILArrow
     m_Bits: 0
-  bulletNameTag: Arrow
+  bulletNameTag: TILArrow
