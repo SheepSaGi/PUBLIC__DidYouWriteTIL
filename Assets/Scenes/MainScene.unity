@@ -135,10 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HyukM
       objectReference: {fileID: 0}
-    - target: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -179,43 +175,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5321974798019554604, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      propertyPath: characterHealth
-      value: 
-      objectReference: {fileID: 1916349936}
-    - target: {fileID: 8251371157985311089, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      propertyPath: baseStats.speed
-      value: 4.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251371157985311089, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      propertyPath: baseStats.maxHealth
-      value: 32
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 289582575}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
---- !u!1 &289582564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-  m_PrefabInstance: {fileID: 245706976}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &289582575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289582564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b494f9fb1a7ae1743a22705405d9e163, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,14 +866,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1384388834233324444, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2076679444672832933, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4914151360628444159, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -953,16 +909,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1384388834233324444, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1990173840}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
---- !u!224 &1504194968 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8972780737625084703, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
-  m_PrefabInstance: {fileID: 1958814004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1526370401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +963,9 @@ MonoBehaviour:
   - tag: TILArrow
     prefab: {fileID: 252922752043563967, guid: 15249abe4ea2e1f4e84d684421b114df, type: 3}
     size: 20
+  - tag: HealthPotion
+    prefab: {fileID: 1417609036074876684, guid: 712f795d52a876c429407ae297960fcb, type: 3}
+    size: 5
 --- !u!114 &1526370404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1061,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5444309084969413506, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
   m_PrefabInstance: {fileID: 1372094892}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990173831}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aff091be98c0d1a48a0df3f48882527b, type: 3}
@@ -1124,14 +1075,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 692156820092599455, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
-      propertyPath: healthsParent
-      value: 
-      objectReference: {fileID: 1504194968}
-    - target: {fileID: 692156820092599455, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
-      propertyPath: healthtPrefab
-      value: 
-      objectReference: {fileID: 7483271267703022315, guid: 943e5ba0579a5284194d30fd66ea05ab, type: 3}
     - target: {fileID: 692156820092599455, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
       propertyPath: characterHealth
       value: 
@@ -1225,23 +1168,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3222d2116733124b83e9c4eff6cd903, type: 3}
---- !u!1 &1990173831 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1384388834233324444, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
-  m_PrefabInstance: {fileID: 1372094892}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1990173840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990173831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcae478fa49c2b24791dab54043e4422, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

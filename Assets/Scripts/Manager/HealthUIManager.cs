@@ -32,10 +32,10 @@ public class HealthUIManager : MonoBehaviour
     private void OnDamageTaken()
     {
         // 피해를 입으면 가장 오른쪽에 있는 체력UI 비활성화
-        if (lastIndex > 0)
+        if(lastIndex > 0)
         {
-            GameObject health = healths[lastIndex--];
-            health.SetActive(false);
+            UpdateUI(lastIndex, false);
+            lastIndex--;
         }
     }
 
@@ -43,12 +43,17 @@ public class HealthUIManager : MonoBehaviour
     private void OnHealReceived()
     {
         // 회복을 받으면 가장 오른쪽에 비활성화된 체력UI 활성화
-        
-        if (lastIndex > 0)
+        if (lastIndex < healths.Count - 1)
         {
-            GameObject health = healths[lastIndex++];
-            health.SetActive(true);
+            lastIndex++;
+            UpdateUI(lastIndex, true);
         }
+    }
+
+    private void UpdateUI(int index, bool isActive)
+    {
+        GameObject health = healths[index];
+        health.SetActive(isActive);
     }
 
     // 플레이어의 최대 체력에 따라 UI를 생성 및 현재 체력만큼 활성화
@@ -60,6 +65,6 @@ public class HealthUIManager : MonoBehaviour
             healths.Add(health);
             healths[i].SetActive(true);
         }
-        lastIndex = healths.Count - 1;
+        lastIndex = characterHealth.MaxHealth - 1;
     }
 }
