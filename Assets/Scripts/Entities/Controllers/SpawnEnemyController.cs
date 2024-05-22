@@ -36,7 +36,9 @@ public class SpawnEnemyController : MonoBehaviour
         switch (randomEnemyType)
         {
             case EnemyType.SeWoong:
-                animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/SeWoong/SeWoong.controller");
+                //animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/SeWoong/SeWoong.controller");
+                //obj.GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
+                animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/YuRok/YuRok.controller");
                 obj.GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
                 break;
             case EnemyType.YuRok:
