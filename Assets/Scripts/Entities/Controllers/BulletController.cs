@@ -58,7 +58,7 @@ public class BulletController : MonoBehaviour
             if (healthSystem != null)
             {
                 // 충돌한 오브젝트의 체력을 감소시킵니다.
-                bool isAttackApplied = healthSystem.ChangeHealth(-(int)attackData.power);
+                healthSystem.ChangeHealth(-(int)attackData.power);
             }
             //여기까지 체력코드
 
