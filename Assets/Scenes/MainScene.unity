@@ -1432,7 +1432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1618713918538909200, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: baseStats.maxHealth
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4914151360628444159, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_LocalPosition.x
