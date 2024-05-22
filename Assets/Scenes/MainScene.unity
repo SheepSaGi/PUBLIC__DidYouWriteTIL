@@ -1663,7 +1663,7 @@ MonoBehaviour:
     size: 20
   - tag: Enemy
     prefab: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
-    size: 20
+    size: 2
   - tag: HealthPotion
     prefab: {fileID: 1417609036074876684, guid: 712f795d52a876c429407ae297960fcb, type: 3}
     size: 5
