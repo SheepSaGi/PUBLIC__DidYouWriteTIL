@@ -5,13 +5,18 @@ public class DestroyOnDeath : MonoBehaviour
     private HealthSystem healthSystem;
     private Rigidbody2D rigidbody;
     private GameManager gameManager;
+    private AudioSource effect;
+    public AudioClip explodeClip;
+
     private void Start()
     {
         healthSystem = GetComponent<HealthSystem>();
         rigidbody = GetComponent<Rigidbody2D>();
+        effect = GetComponent<AudioSource>();
         // 실제 실행 주체는 healthSystem임
         healthSystem.OnDeath += OnDeath;
         gameManager = FindObjectOfType<GameManager>();
+
 
     }
 
@@ -28,16 +33,24 @@ public class DestroyOnDeath : MonoBehaviour
             renderer.color = color;
         }
 
-        // 스크립트 더이상 작동 안하도록 함
-        foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+        // 효과음발생
+        if (gameObject.CompareTag("Enemy"))
         {
-            component.enabled = false;
+            Debug.Log("효과음발생");
+            effect.PlayOneShot(explodeClip);
         }
+
+        // 스크립트 더이상 작동 안하도록 함
+        //foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+        //{
+        //    component.enabled = false;
+        //}
+
 
         if (gameObject.CompareTag("Player"))
         {
             Debug.Log("끝");
-            gameManager.PlayerDeath();
+            gameManager.EndGame();
 
         }
         // 2초뒤에 파괴
