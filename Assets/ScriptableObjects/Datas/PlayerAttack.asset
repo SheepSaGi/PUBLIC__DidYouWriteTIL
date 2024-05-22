@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerAttack
   m_EditorClassIdentifier: 
   count: 5
-  duration: 1
+  duration: 0.2
   power: 2
-  speed: 10
+  speed: 20
   target:
     serializedVersion: 2
     m_Bits: 64
