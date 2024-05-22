@@ -1469,6 +1469,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8761549152761821762, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: SunhoController
+      value: 
+      objectReference: {fileID: 9100000, guid: f49dc1dd9b5c48e46af1910a42987684, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
