@@ -34,7 +34,7 @@ public class TILShoot : MonoBehaviour
         float projectilesAngleSpace =AttackSO.multupleBulletAngel;
         int numberOfProjectilesPerShot = AttackSO.numberofBulletshot;
 
-        //중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계했어요! 
+        //중간부터 펼쳐지는게 아니라 minangle부터 커지면서 쏘는 것으로 설계
         float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * AttackSO.multupleBulletAngel;
         for (int i = 0; i < numberOfProjectilesPerShot; i++)
         {
