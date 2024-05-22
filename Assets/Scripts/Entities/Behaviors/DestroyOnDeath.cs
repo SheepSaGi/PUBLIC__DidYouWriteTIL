@@ -6,7 +6,7 @@ public class DestroyOnDeath : MonoBehaviour
     private Rigidbody2D rigidbody;
     private GameManager gameManager;
     
-    public AudioSource enemyDeath;
+    private AudioSource enemyDeath;
 
     private void Start()
     {
