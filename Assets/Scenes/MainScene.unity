@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4753006739607553845, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.05
@@ -992,6 +996,8 @@ MonoBehaviour:
   TILscore: {fileID: 0}
   playerTag: Player
   gameOverUI: {fileID: 1355995405}
+  gameUI: {fileID: 0}
+  playerUI: {fileID: 0}
 --- !u!114 &1526370405
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -104,8 +104,6 @@ MonoBehaviour:
   levelCollisionLayer:
     serializedVersion: 2
     m_Bits: 128
-  bulletClip: {fileID: 0}
-  bulletSpawnAudio: {fileID: 0}
   fxOnDestory: 1
 --- !u!96 &6988445008459138669
 TrailRenderer:
@@ -331,7 +329,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f6b87ef122114f249b6a9fbbd738f1d1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
