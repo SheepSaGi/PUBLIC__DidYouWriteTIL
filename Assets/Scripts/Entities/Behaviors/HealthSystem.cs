@@ -48,20 +48,6 @@ public class HealthSystem : MonoBehaviour
 
     public bool ChangeHealth(int change)
     {
-        // 무적 시간에는 체력이 달지 않음
-        if (timeSinceLastChange < healthChangeDelay)
-        {
-            return false;
-        }
-
-        timeSinceLastChange = 0f;
-        CurrentHealth += change;
-        // [최솟값을 0, 최댓값을 MaxHealth로 하는 구문]
-        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
-        // 다른표현
-        // 1) CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
-        // 2) CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
-
         if (CurrentHealth <= 0f) // 먼저 죽었는지 확인
         {
             CallDeath();
@@ -76,9 +62,22 @@ public class HealthSystem : MonoBehaviour
         }
         else // 최종적으로 - 를 해주면 OnDamage
         {
+            // 무적 시간에는 체력이 달지 않음
+            if (isAttacked)
+            {
+                return false;
+            }
             OnDamage?.Invoke();
             isAttacked = true;
         }
+
+        timeSinceLastChange = 0f;
+        CurrentHealth += change;
+        // [최솟값을 0, 최댓값을 MaxHealth로 하는 구문]
+        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
+        // 다른표현
+        // 1) CurrentHealth = CurrentHealth > MaxHealth ? MaxHealth : CurrentHealth;
+        // 2) CurrentHealth = CurrentHealth < 0 ? 0 : CurrentHealth;
 
         return true;
     }
