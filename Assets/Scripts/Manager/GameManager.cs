@@ -47,6 +47,6 @@ public class GameManager : MonoBehaviour
         gameUI.SetActive(false);
         playerUI.SetActive(false);
         gameOverUI.SetActive(true); // 게임 오버UI활성화
-        //Time.timeScale = 0; // 게임 시간 정지
+        Time.timeScale = 0; // 게임 시간 정지
     }
 }
