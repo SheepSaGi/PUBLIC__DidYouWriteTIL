@@ -59,5 +59,11 @@ public class DestroyOnDeath : MonoBehaviour
     void SetDisable()
     {
         gameObject.SetActive(false);
+        foreach (SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
+        {
+            Color color = renderer.color;
+            color.a = 1f;
+            renderer.color = color;
+        }
     }
 }

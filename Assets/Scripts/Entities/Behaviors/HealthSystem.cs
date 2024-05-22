@@ -65,6 +65,8 @@ public class HealthSystem : MonoBehaviour
         if (CurrentHealth <= 0f) // 먼저 죽었는지 확인
         {
             CallDeath();
+            CurrentHealth = statsHandler.CurrentStat.maxHealth;
+
             return true;
         }
 
