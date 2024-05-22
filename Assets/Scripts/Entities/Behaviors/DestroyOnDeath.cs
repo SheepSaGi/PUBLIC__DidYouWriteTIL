@@ -34,10 +34,10 @@ public class DestroyOnDeath : MonoBehaviour
             component.enabled = false;
         }
 
-        if(gameObject.CompareTag("Player"))
+        if (gameObject.CompareTag("Player"))
         {
             Debug.Log("끝");
-            gameManager.EndGame();
+            gameManager.PlayerDeath();
 
         }
         // 2초뒤에 파괴
