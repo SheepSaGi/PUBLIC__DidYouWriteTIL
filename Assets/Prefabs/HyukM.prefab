@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b494f9fb1a7ae1743a22705405d9e163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explodeClip: {fileID: 8300000, guid: ec0001e9c271ef44d8dc3d46cccfbefb, type: 3}
 --- !u!82 &3489355176412064444
 AudioSource:
   m_ObjectHideFlags: 0
@@ -236,7 +237,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ec0001e9c271ef44d8dc3d46cccfbefb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
