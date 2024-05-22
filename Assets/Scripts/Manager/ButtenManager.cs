@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("RE");
         Time.timeScale = 1.0f;
-        SoundManager.Sound.Clear();
         SceneManager.LoadScene(1);
     }
 }
