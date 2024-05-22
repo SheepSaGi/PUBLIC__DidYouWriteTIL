@@ -4,6 +4,14 @@ using UnityEngine;
 public class HealthPotion : MonoBehaviour
 {
     [SerializeField] private int healAamount = 1;
+    
+    private AudioSource effect;
+    public AudioClip healSoundClip;
+
+    public void Start()
+    {
+        effect = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +22,9 @@ public class HealthPotion : MonoBehaviour
             {
                 healthSystem.ChangeHealth(healAamount);               
             }
+            
+            effect.PlayOneShot(healSoundClip);
+
             gameObject.SetActive(false);
         }
     }
