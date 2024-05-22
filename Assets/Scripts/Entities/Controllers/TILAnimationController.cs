@@ -7,13 +7,8 @@ public class TILAnimationController : MonoBehaviour
 {
     private HealthSystem healthSystem;
     private Animator animator;
-    //protected TopDownController controller;
 
-    private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsHit = Animator.StringToHash("isHit");
-    private static readonly int Attack = Animator.StringToHash("Attack");
-
-    private readonly float magnituteThreshold = 0.5f;
 
     private void Awake()
     {
@@ -32,18 +27,6 @@ public class TILAnimationController : MonoBehaviour
             healthSystem.OnDamage += Hit;
             healthSystem.OnInvincibilityEnd += InvincibilityEnd;
         }
-    }
-
-    // 이동
-    /*private void Move(Vector2 obj)
-    {
-        animator.SetBool(IsWalking, obj.magnitude > magnituteThreshold);
-    }*/
-
-    // 공격
-    private void Attacking(AttackSO obj)
-    {
-        animator.SetTrigger(Attack);
     }
 
     // 피격

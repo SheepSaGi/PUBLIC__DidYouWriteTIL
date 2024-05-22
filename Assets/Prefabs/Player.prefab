@@ -269,7 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b494f9fb1a7ae1743a22705405d9e163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explodeClip: {fileID: 0}
 --- !u!1 &7012582450593354118
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,4 +391,4 @@ MonoBehaviour:
   GiwoongController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
   JiYoonController: {fileID: 9100000, guid: 9cd36aff9ef00f7469c6e22ae5b0da0c, type: 2}
   JihyoController: {fileID: 9100000, guid: 29fce20e5b5a6de48877086d71669649, type: 2}
-  SunhoController: {fileID: 9100000, guid: 9a39025a66d9f7d45a14aa9d7f9a7409, type: 2}
+  SunhoController: {fileID: 9100000, guid: f49dc1dd9b5c48e46af1910a42987684, type: 2}
