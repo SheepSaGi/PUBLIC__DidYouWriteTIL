@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_Name
-      value: HyukM
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4995276760490929697, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -969,7 +969,7 @@ MonoBehaviour:
   - tag: TILArrow
     prefab: {fileID: 252922752043563967, guid: 15249abe4ea2e1f4e84d684421b114df, type: 3}
     size: 20
-  - tag: HyukM
+  - tag: Enemy
     prefab: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
     size: 20
   - tag: HealthPotion
@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed840bf2272e6d94a950e8f9eea04669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Monster: {fileID: 773901211975948262, guid: c28785c47eaf1714fad71d0873eadad9, type: 3}
+  spawnFrequency: 5
 --- !u!1 &1716207287
 GameObject:
   m_ObjectHideFlags: 0

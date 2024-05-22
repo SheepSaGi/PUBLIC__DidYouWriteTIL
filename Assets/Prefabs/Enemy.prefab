@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 1159423840320000355}
   - component: {fileID: 4753006739607553845}
   m_Layer: 6
-  m_Name: HyukM
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

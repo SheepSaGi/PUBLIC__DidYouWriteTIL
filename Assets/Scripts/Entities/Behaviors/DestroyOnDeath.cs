@@ -50,7 +50,7 @@ public class DestroyOnDeath : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             Debug.Log("끝");
-            gameManager.EndGame();
+            gameManager.PlayerDeath();
 
         }
         // 2초뒤에 파괴
