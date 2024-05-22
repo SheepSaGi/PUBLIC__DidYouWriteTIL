@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAamount: 1
+  healthPotionSprite: {fileID: 6713787186806154582}
+  healthPotionCollider: {fileID: -4456012671341988615}
   healSoundClip: {fileID: 8300000, guid: 67b9946ad4877514e80bf177f2418e67, type: 3}
 --- !u!58 &-4456012671341988615
 CircleCollider2D:
@@ -146,7 +148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 67b9946ad4877514e80bf177f2418e67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
