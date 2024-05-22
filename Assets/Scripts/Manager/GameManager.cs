@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         gameUI.SetActive(false);
         playerUI.SetActive(false);
         gameOverUI.SetActive(true); // 게임 오버UI활성화
+        ObjectPool.DestroyAllObjectsInPool(); // 모든 오브젝트풀 삭제
         Endscore = score;
         TILscore.text = "당신은 " + score.ToString()+"일동안 TIL이 밀렸습니다..";
         Time.timeScale = 0; // 게임 시간 정지
