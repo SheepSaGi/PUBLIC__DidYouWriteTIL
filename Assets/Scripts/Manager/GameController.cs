@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public string restartScene = "CharacterChoice";
    public void EndGame()
     {
-        Debug.Log("E");
+        Debug.Log("End");
         UnityEditor.EditorApplication.isPlaying = false;
 
         Application.Quit();
@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
 
     public void ResetGame()
     {
-        Debug.Log("E");
+        Debug.Log("RE");
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(1);
     }
 }
