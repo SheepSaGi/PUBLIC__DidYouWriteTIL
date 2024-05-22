@@ -48,14 +48,8 @@ public class TILRangedEnemyController : TILEnemyController
 
     private void CheckIfNear(float distance, Vector2 direction)
     {
-        if (distance <= shootRange)
-        {
             TryShootAtTarget(direction);
-        }
-        else
-        {
-            CallMoveEvent(direction); // 사정거리 밖이지만 추적 범위 내에 있을 경우, 타겟 쪽으로 이동합니다.
-        }
+            CallMoveEvent(direction); 
     }
 
     private void TryShootAtTarget(Vector2 direction)
