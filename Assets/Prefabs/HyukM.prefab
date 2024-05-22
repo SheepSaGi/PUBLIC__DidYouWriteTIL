@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5321974798019554604}
   - component: {fileID: 6284907656080555757}
   - component: {fileID: 1159423840320000355}
-  - component: {fileID: 3489355176412064444}
+  - component: {fileID: 4753006739607553845}
   m_Layer: 6
   m_Name: HyukM
   m_TagString: Enemy
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explodeClip: {fileID: 8300000, guid: ec0001e9c271ef44d8dc3d46cccfbefb, type: 3}
---- !u!82 &3489355176412064444
+--- !u!82 &4753006739607553845
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,9 +235,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec0001e9c271ef44d8dc3d46cccfbefb, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

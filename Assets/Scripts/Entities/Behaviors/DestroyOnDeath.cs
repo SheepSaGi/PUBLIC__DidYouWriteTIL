@@ -36,7 +36,7 @@ public class DestroyOnDeath : MonoBehaviour
         // 효과음발생
         if (gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("효과음발생");
+            Debug.Log("Destroy 효과음발생");
             effect.PlayOneShot(explodeClip);
         }
 
