@@ -9,7 +9,11 @@ public class HealthPotion : MonoBehaviour
     {
         if (collision.CompareTag("Player")) // 플레이어와 충돌했을 때
         {
-            collision.GetComponent<HealthSystem>().ChangeHealth(healAamount);
+            HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+            if (healthSystem.CurrentHealth < healthSystem.MaxHealth)
+            {
+                collision.GetComponent<HealthSystem>().ChangeHealth(healAamount);               
+            }
             gameObject.SetActive(false);
         }
     }
