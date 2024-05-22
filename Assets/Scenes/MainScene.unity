@@ -880,7 +880,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: f9eecfed5a282094ea171efefb1802c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1429,6 +1429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1618713918538909200, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
+      propertyPath: baseStats.maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4914151360628444159, guid: 260220f7092c2d444adafd9b8f01f513, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1490,7 +1494,7 @@ GameObject:
   - component: {fileID: 1438805217}
   - component: {fileID: 1438805216}
   m_Layer: 5
-  m_Name: ResultTxt
+  m_Name: EndScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1684,8 +1688,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  Endscore: 0
   scoreText: {fileID: 1958814005}
-  TILscore: {fileID: 0}
+  TILscore: {fileID: 1438805216}
   playerTag: Player
   gameOverUI: {fileID: 1831258999}
   gameUI: {fileID: 253575090}
@@ -1769,7 +1774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1831259000
 SpriteRenderer:
   m_ObjectHideFlags: 0

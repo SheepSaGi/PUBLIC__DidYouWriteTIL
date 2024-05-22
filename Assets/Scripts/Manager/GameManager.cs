@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public int score = 0;
+    public int Endscore = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI TILscore;
     public Transform Player { get; private set; }
@@ -47,6 +48,8 @@ public class GameManager : MonoBehaviour
         gameUI.SetActive(false);
         playerUI.SetActive(false);
         gameOverUI.SetActive(true); // 게임 오버UI활성화
+        Endscore = score;
+        TILscore.text = "당신은 " + score.ToString()+"일동안 TIL이 밀렸습니다..";
         Time.timeScale = 0; // 게임 시간 정지
     }
 }
