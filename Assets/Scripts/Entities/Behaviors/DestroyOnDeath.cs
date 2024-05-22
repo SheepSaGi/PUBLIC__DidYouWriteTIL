@@ -7,6 +7,7 @@ public class DestroyOnDeath : MonoBehaviour
     private GameManager gameManager;
     
     private AudioSource enemyDeath;
+    public AudioClip explodeClip;
 
     private void Start()
     {
@@ -37,14 +38,15 @@ public class DestroyOnDeath : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
         {
             Debug.Log("효과음발생");
-            enemyDeath.Play();
+            //enemyDeath.Play();
+            enemyDeath.PlayOneShot(explodeClip);
         }
 
         // 스크립트 더이상 작동 안하도록 함
-        foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
-        {
-            component.enabled = false;
-        }
+        //foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
+        //{
+        //    component.enabled = false;
+        //}
 
 
         if (gameObject.CompareTag("Player"))
