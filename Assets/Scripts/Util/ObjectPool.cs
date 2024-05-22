@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class ObjectPool : MonoBehaviour
 {
@@ -49,5 +50,17 @@ public class ObjectPool : MonoBehaviour
         PoolDictionary[tag].Enqueue(obj);
         obj.SetActive(true);
         return obj;
+    }
+
+    public void DestroyAllObjectsInPool()
+    {
+        foreach (var pool in PoolDictionary)
+        {
+            foreach (var obj in pool.Value)
+            {
+                Destroy(obj);
+            }
+            pool.Value.Clear(); // 풀을 비웁니다.
+        }
     }
 }
