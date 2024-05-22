@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public string restartScene = "CharacterChoice";
    public void EndGame()
     {
         Debug.Log("End");
