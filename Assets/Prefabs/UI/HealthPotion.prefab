@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAamount: 1
-  healSoundClip: {fileID: 8300000, guid: 037708d86afa9e644b3763cc62a8c0a8, type: 3}
+  healSoundClip: {fileID: 8300000, guid: 67b9946ad4877514e80bf177f2418e67, type: 3}
 --- !u!58 &-4456012671341988615
 CircleCollider2D:
   m_ObjectHideFlags: 0
