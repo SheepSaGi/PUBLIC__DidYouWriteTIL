@@ -5,14 +5,11 @@ public class DestroyOnDeath : MonoBehaviour
     private HealthSystem healthSystem;
     private Rigidbody2D rigidbody;
     private GameManager gameManager;
-    private AudioSource effect;
-    public AudioClip explodeClip;
 
     private void Start()
     {
         healthSystem = GetComponent<HealthSystem>();
         rigidbody = GetComponent<Rigidbody2D>();
-        effect = GetComponent<AudioSource>();
         // 실제 실행 주체는 healthSystem임
         healthSystem.OnDeath += OnDeath;
         gameManager = FindObjectOfType<GameManager>();
@@ -37,7 +34,7 @@ public class DestroyOnDeath : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Destroy 효과음발생");
-            effect.PlayOneShot(explodeClip);
+            SoundManager.Sound.Play("Explode.mp3", SoundType.Effect, 0.2f);
         }
 
         // 스크립트 더이상 작동 안하도록 함

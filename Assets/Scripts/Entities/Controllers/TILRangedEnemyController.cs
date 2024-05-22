@@ -7,13 +7,6 @@ public class TILRangedEnemyController : TILEnemyController
     [SerializeField] private float shootRange = 7f;
     [SerializeField] private string targetTag = "Player";
 
-    private bool isCollidingWithTarget;
-
-    private HealthSystem healthSystem;
-    private HealthSystem collidingTargetHealthSystem;
-    private TILMovement collidingMovement;
-
-
     private int layerMaskLevel;
     private int layerMaskTarget;
 
@@ -22,7 +15,6 @@ public class TILRangedEnemyController : TILEnemyController
         base.Start();
         layerMaskLevel = LayerMask.NameToLayer("Level");
         layerMaskTarget = stats.CurrentStat.attackSO.target;
-        healthSystem = GetComponent<HealthSystem>();
     }
 
 

@@ -31,7 +31,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    // 효과음 중첩이 가능하기 위함
+    // 배경음, 효과음 중첩이 가능하기 위함
     private AudioSource[] _audioSources = new AudioSource[(int)SoundType.MaxCount];
     private Dictionary<string, AudioClip> _audioClips = new Dictionary<string, AudioClip>();
 
@@ -94,6 +94,10 @@ public class SoundManager : MonoBehaviour
         if (type == SoundType.Effect)
         {
             AudioSource audioSource = _audioSources[(int)SoundType.Effect];
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
             audioSource.volume = volume;
             audioSource.PlayOneShot(clip); // 한 번만 재생
         }
