@@ -48,8 +48,6 @@ public class HealthSystem : MonoBehaviour
 
     public bool ChangeHealth(int change)
     {
-        Debug.Log("체력 변경 : " + change);
-
         if (CurrentHealth <= 0f) // 먼저 죽었는지 확인
         {
             CallDeath();
@@ -75,7 +73,6 @@ public class HealthSystem : MonoBehaviour
 
         timeSinceLastChange = 0f;
         CurrentHealth += change;
-        Debug.Log("현재체력 : " + CurrentHealth);
         // [최솟값을 0, 최댓값을 MaxHealth로 하는 구문]
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
         // 다른표현
