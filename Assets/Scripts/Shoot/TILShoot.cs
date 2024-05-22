@@ -52,9 +52,7 @@ public class TILShoot : MonoBehaviour
         GameObject obj = GameManager.Instance.ObjectPool.SpawnFromPool(attackSO.bulletNameTag);
         obj.transform.position = bulletSpawnPosition.position;
         BulletController attackController = obj.GetComponent<BulletController>();
-        Debug.Log(aimDirection);
 
-        Debug.Log((RotateVector2(aimDirection, angle)));
         Vector3 rotatevector = Quaternion.AngleAxis(angle, Vector3.forward)*aimDirection;
         attackController.InitializeAttack(rotatevector, attackSO);
     }
