@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
 
     public GameObject gameOverUI;
-
+    public GameObject gameUI;
+    public GameObject playerUI;
     private void Awake()
     {
         Instance = this;
@@ -41,9 +42,11 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = score.ToString();
     }
-    public void EndGame()
+    public void PlayerDeath()
     {
+        gameUI.SetActive(false);
+        playerUI.SetActive(false);
         gameOverUI.SetActive(true); // 게임 오버UI활성화
-        Time.timeScale = 0; // 게임 시간 정지
+        //Time.timeScale = 0; // 게임 시간 정지
     }
 }
