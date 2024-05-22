@@ -12,7 +12,7 @@ public class HealthPotion : MonoBehaviour
             HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
             if (healthSystem.CurrentHealth < healthSystem.MaxHealth)
             {
-                collision.GetComponent<HealthSystem>().ChangeHealth(healAamount);               
+                healthSystem.ChangeHealth(healAamount);               
             }
             gameObject.SetActive(false);
         }
