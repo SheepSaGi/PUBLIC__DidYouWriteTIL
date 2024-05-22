@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour
         Application.Quit();
     }
 
-
     public void ResetGame()
     {
         Debug.Log("E");
