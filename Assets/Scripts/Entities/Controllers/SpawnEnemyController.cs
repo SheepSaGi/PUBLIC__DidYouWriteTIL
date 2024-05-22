@@ -19,7 +19,6 @@ public class SpawnEnemyController : MonoBehaviour
         currTime += Time.deltaTime;
         if (currTime > spawnFrequency)
         {
-            Debug.Log("«ı∏≈ º“»Ø");
             SpawnMonster();
             currTime = 0;
         }
@@ -38,15 +37,15 @@ public class SpawnEnemyController : MonoBehaviour
         {
             case EnemyType.SeWoong:
                 animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/SeWoong/SeWoong.controller");
-                obj.GetComponent<Animator>().runtimeAnimatorController = animatorController;
+                obj.GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
                 break;
             case EnemyType.YuRok:
                 animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/YuRok/YuRok.controller");
-                obj.GetComponent<Animator>().runtimeAnimatorController = animatorController;
+                obj.GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
                 break;
             case EnemyType.HyukM:
                 animatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Animations/Enemy/Hyuk/Hyuk.controller");
-                obj.GetComponent<Animator>().runtimeAnimatorController = animatorController;
+                obj.GetComponentInChildren<Animator>().runtimeAnimatorController = animatorController;
                 break;
         }        
     }
