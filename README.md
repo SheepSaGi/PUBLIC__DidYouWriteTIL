@@ -13,7 +13,7 @@
 Figma Link : https://www.figma.com/file/mCbnZeYcj0rEZiE6Cep46n?%3Fnode-id=0-1&embed_host=notion&kind=file&t=FbuPCauUs8Kx3VNP-0&viewer=1
 
 
-![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/d3583535-0b36-4071-9ec1-ac74d2370915)
+![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/dc12e681-0057-48d5-a5d3-5ef0c8a6384c)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/b22a8098-3f44-446a-85ab-8122a957621c)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/abbfc38d-a8ba-496e-a219-74417ecfab72)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/cf9ca878-6522-4081-9aeb-a3e894f4d776)
