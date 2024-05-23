@@ -14,7 +14,7 @@ Figma Link : https://www.figma.com/file/mCbnZeYcj0rEZiE6Cep46n?%3Fnode-id=0-1&em
 
 
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/dc12e681-0057-48d5-a5d3-5ef0c8a6384c)
-![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/82e7f9cb-aed8-45f3-b338-5b424a4b9852)
+![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/63e53211-3862-4ceb-8be2-712ea3a7c265)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/cf9ca878-6522-4081-9aeb-a3e894f4d776)
 Video Link : https://vimeo.com/949114422?share=copy
 
