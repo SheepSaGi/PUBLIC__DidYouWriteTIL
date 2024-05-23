@@ -7,7 +7,7 @@
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/2a77d373-af3f-4552-be55-f326bc0c0a95)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/6ee05835-3686-45b3-be51-31f0267627b9)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/1d64a049-7f67-4d9d-83fa-bf8f0a9134b9)
-![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/82deb35d-57a7-4047-ad5c-5f7e1611a6cc)
+![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/2cc40b23-fabb-4e86-992b-8b1cd0d152ba)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/541ce9fb-37d4-4592-b168-509337413678)
 ![image](https://github.com/SheepSaGi/PUBLIC__DidYouWriteTIL/assets/66246253/a6eaca3e-50cd-49d7-9516-ce501fc08cbf)
 Figma Link : https://www.figma.com/file/mCbnZeYcj0rEZiE6Cep46n?%3Fnode-id=0-1&embed_host=notion&kind=file&t=FbuPCauUs8Kx3VNP-0&viewer=1
